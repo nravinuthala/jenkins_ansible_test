@@ -1,0 +1,10 @@
+---
+- hosts: jenkins-slave1
+  gather_facts: no
+
+  tasks:
+  - command: "df -h"
+    register: output
+
+  - debug:
+      var: output
